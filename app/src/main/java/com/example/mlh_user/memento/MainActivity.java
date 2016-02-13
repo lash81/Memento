@@ -1,5 +1,6 @@
 package com.example.mlh_user.memento;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user clicks the Send button */
     public void editTime(View view) {
+        Intent myIntent = new Intent(this, SettingsActivity.class);
+        startActivity(myIntent);
         System.out.println("callback ran");
         // Do something in response to button
     }
