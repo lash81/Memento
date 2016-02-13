@@ -49,4 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /** Called when the user clicks the Send button */
+    public void editTime(View view) {
+        System.out.println("callback ran");
+        // Do something in response to button
+    }
 }
