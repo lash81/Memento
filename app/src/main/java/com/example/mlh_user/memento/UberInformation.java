@@ -6,4 +6,6 @@ package com.example.mlh_user.memento;
 public class UberInformation {
 
     public static final String clientID = "vwWAHJAYgxQSj2zFsOrFh5sFV79bi15u";
+    public static final String clientSecret = "Lz-tqOEXxVl0NaybbjEeM8O-bWNcim2Gd5TETHJK";
+
 }

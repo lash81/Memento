@@ -94,6 +94,6 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent("ping_phone");
         PendingIntent sender = PendingIntent.getBroadcast(getApplicationContext(), 1, myIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             // Request code = 1
-        alarm.set(AlarmManager.RTC_WAKEUP,1000+c.getTimeInMillis(),sender);
+        alarm.set(AlarmManager.RTC_WAKEUP,2000+c.getTimeInMillis(),sender);
     }
 }
