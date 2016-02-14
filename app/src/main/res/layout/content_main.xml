@@ -15,7 +15,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change Time to Go Home"
+        android:text="Change When You Want to Go Home"
         android:onClick="editTime" />
 
 </RelativeLayout>

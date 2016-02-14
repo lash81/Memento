@@ -9,4 +9,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mlh_user.memento.SettingActivity">
 
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timePicker"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Time"
+        android:id="@+id/setTimeButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/timePicker"
+        android:layout_centerHorizontal="true"
+        android:onClick="setTimeToGoHome"/>
+
 </RelativeLayout>
