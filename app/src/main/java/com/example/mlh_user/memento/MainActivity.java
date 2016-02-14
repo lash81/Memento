@@ -53,9 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user clicks the Send button */
     public void editTime(View view) {
-        Intent myIntent = new Intent(this, SettingsActivity.class);
+        Intent myIntent = new Intent(this, SettingActivity.class);
         startActivity(myIntent);
         System.out.println("callback ran");
         // Do something in response to button
     }
+
 }
