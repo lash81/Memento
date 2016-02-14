@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -21,21 +22,24 @@ import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity {
 
+    Vibrator vibrator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+//        vibrator = (Vibrator) this.getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
     }
 
     @Override
@@ -78,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onReceive(Context context, Intent intent) {
                 Log.d("Call Ran", "Received Intent");
+//                vibrator.vibrate(500);// vibrate on receive
                 startActivity(new Intent(context, CallbackActivity.class));
             }
         };
@@ -89,6 +94,6 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent("ping_phone");
         PendingIntent sender = PendingIntent.getBroadcast(getApplicationContext(), 1, myIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             // Request code = 1
-        alarm.set(AlarmManager.RTC_WAKEUP,5000+c.getTimeInMillis(),sender);
+        alarm.set(AlarmManager.RTC_WAKEUP,1000+c.getTimeInMillis(),sender);
     }
 }
