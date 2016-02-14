@@ -43,5 +43,6 @@ public class SettingActivity extends AppCompatActivity {
         int minute = timePicker.getCurrentMinute();
         Log.d("Set Time", String.format("We set: %d:%d", hour, minute));
         MementoApp.setTimeToGoHome(hour, minute);
+        finish();
     }
 }
